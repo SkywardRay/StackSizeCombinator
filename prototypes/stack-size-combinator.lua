@@ -25,7 +25,16 @@ end
 
 local item = copyPrototype("item", "arithmetic-combinator", "stack-size-combinator")
 
+item.icon = "__StackSizeCombinator__/graphics/icons/stack-size-combinator.png"
+item.order = "c[combinators]-d[stack-size-combinator]"
+
 local entity = copyPrototype("arithmetic-combinator", "arithmetic-combinator", "stack-size-combinator")
+
+entity.icon = "__StackSizeCombinator__/graphics/icons/stack-size-combinator.png"
+entity.sprites.north.filename = "__StackSizeCombinator__/graphics/entity/stack-size-combinator.png"
+entity.sprites.east.filename = "__StackSizeCombinator__/graphics/entity/stack-size-combinator.png"
+entity.sprites.south.filename = "__StackSizeCombinator__/graphics/entity/stack-size-combinator.png"
+entity.sprites.west.filename = "__StackSizeCombinator__/graphics/entity/stack-size-combinator.png"
 
 local recipe = copyPrototype("recipe", "arithmetic-combinator", "stack-size-combinator")
 
