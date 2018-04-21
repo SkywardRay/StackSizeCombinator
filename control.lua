@@ -42,11 +42,17 @@ local function get_signal(control)
 end
 
 local function set_parameters(control, first_signal, output_signal, stack_size)
+    local current_operation = "*"
+
+    if control.parameters ~= nil and control.parameters.parameters ~= nil and control.parameters.parameters.operation ~= nil then
+        current_operation = control.parameters.parameters.operation
+    end
+
     control.parameters = {
         parameters = {
             first_signal = first_signal,
             first_constant = 0,
-            operation = "*",
+            operation = current_operation,
             second_signal = nil,
             second_constant = stack_size,
             output_signal = output_signal
